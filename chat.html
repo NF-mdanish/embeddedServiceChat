@@ -4,7 +4,9 @@
 	function initEmbeddedMessaging() {
 		try {
 			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+			console.log('step 1');
 			embeddedservice_bootstrap.init(
+				
 				'00DDz000001qhZU',
 				'City_Gear_Deployment',
 				'https://hibbcity--uat.sandbox.my.site.com/ESWCityGearDeployment1723645505171',
@@ -12,7 +14,9 @@
 					scrt2URL: 'https://hibbcity--uat.sandbox.my.salesforce-scrt.com'
 				}
 			);
+			console.log('step 2');
 		} catch (err) {
+			console.log('step 3');
 			console.error('Error loading Embedded Messaging: ', err);
 		}
 	};
